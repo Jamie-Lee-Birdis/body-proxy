@@ -1,0 +1,49 @@
+{
+  "name": "hero-section",
+  "version": "1.0.0",
+  "description": "Hack Reactor Front End Capstone",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --detectOpenHandles",
+    "build": "webpack --watch",
+    "start-dev": "npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all && nodemon server/index.js",
+    "reset:db": "npx sequelize-cli db:seed:undo:all && npx sequelize-cli db:migrate:undo:all",
+    "setup:db": "npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jamie-Lee-Birdis/hero-section.git"
+  },
+  "author": "Harsh Vikram Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jamie-Lee-Birdis/hero-section/issues"
+  },
+  "homepage": "https://github.com/Jamie-Lee-Birdis/hero-section#readme",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
+    "faker": "^5.1.0",
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "style-loader": "^1.2.1",
+    "supertest": "^5.0.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}
