@@ -3,12 +3,12 @@ const app = express();
 const bodyParser = require('body-parser');
 var cors = require('cors')
 const path = require('path')
-const port = 3001;
+const port = 3003;
 const Game = require('../db/index.js');
 
 app.use(cors())
 app.use(express.json())
-app.use(express.static(path.join(__dirname, '../client/build')))
+app.use(express.static(path.join(__dirname, '../client/dist')))
 
 app.get('/moist-air/game',(req, res)=>{
   let data = Game.find({});

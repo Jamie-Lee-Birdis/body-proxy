@@ -1,0 +1,44 @@
+{
+  "name": "reviews",
+  "version": "1.0.0",
+  "description": "reviews module and footer",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.11.1",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "jest": "^26.5.0",
+    "jest-environment-enzyme": "^7.1.2",
+    "jest-enzyme": "^7.1.2",
+    "morgan": "^1.10.0"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
+  "scripts": {
+    "build": "cd client && npm run build",
+    "clearDB": "cd database && npm run unseed && npm run unmigrate && npm run unDB",
+    "installAll": "npm install && cd database && npm install && cd ../server && npm install",
+    "initialize": "cd database && npm run database && npm run migrate && npm run seed",
+    "start": "nodemon server/index.js",
+    "test": "cd tests && jest --detectOpenHandles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jamie-Lee-Birdis/reviews.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jamie-Lee-Birdis/reviews/issues"
+  },
+  "homepage": "https://github.com/Jamie-Lee-Birdis/reviews#readme"
+}
