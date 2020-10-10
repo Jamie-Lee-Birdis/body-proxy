@@ -1,5 +1,5 @@
-import React from "react";
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 
 const Wrapper = styled.span`
@@ -24,14 +24,14 @@ const UnHelpful = styled.i`
 
 var BtnUnHelpful = ({id, voteHandler}) => {
   const handleClick = (event, cb) => {
-    cb(id, 'unhelpful')
-  }
+    cb(id, 'unhelpful');
+  };
   return (
     <Wrapper onClick={(event) => handleClick(event, voteHandler)}>
       <UnHelpful /> No
     </Wrapper>
   );
 
-}
+};
 
 export default BtnUnHelpful;

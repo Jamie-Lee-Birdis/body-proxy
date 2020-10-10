@@ -18,7 +18,7 @@ module.exports = {
           if (fakeUser[result.username] > 0) {
             var GameId = result.GameId;
             var UserId = result.UserId;
-            var UserGameId = UserId.toString() + GameId.toString();
+            var UserGameId = result.id;
             var recommended = faker.random.boolean();
             if (GameId === 1) {
               if (fakeReviews.length > 0) {

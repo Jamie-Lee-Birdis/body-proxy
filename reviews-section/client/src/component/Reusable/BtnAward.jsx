@@ -1,5 +1,5 @@
-import React from "react";
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 var BtnAward = ({ id, modalToggler }) => {
 
@@ -14,7 +14,7 @@ var BtnAward = ({ id, modalToggler }) => {
       </Award>
     </Wrapper>
   );
-}
+};
 
 export default BtnAward;
 
@@ -42,5 +42,6 @@ Award.displayName = 'Award';
 const Icon = styled.img`
   height: 16px;
   vertical-align: middle;
+  width: unset;
 `;
 Icon.displayName = 'Icon';

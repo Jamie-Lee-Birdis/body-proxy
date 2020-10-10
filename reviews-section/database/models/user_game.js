@@ -12,13 +12,12 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       User_game.belongsTo(models.User, {foreignKey: 'UserId'});
       User_game.belongsTo(models.Game, {foreignKey: 'GameId'});
-      User_game.hasOne(models.Review, {foreignKey: 'UserGameId'});
+      User_game.hasOne(models.Review, {foreignKey: 'id'});
     }
   };
   User_game.init({
     GameId: DataTypes.INTEGER,
     UserId: DataTypes.INTEGER,
-    UserGameId: DataTypes.INTEGER,
     time_played: DataTypes.INTEGER,
     purchase_type: DataTypes.STRING
   }, {

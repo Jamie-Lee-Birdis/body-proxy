@@ -4,7 +4,6 @@ module.exports = {
     await queryInterface.createTable('User_games', {
       id: {
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
@@ -14,11 +13,6 @@ module.exports = {
         onUpdate: 'cascade'
       },
       GameId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        onUpdate: 'cascade'
-      },
-      UserGameId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         onUpdate: 'cascade'

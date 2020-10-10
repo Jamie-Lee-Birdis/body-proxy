@@ -64,7 +64,6 @@ var App = function(props) {
       setRecentCount(recentlyPosted.length);
       recentlyPosted = recentlyPosted.slice(0, 11);
     }
-
     setData(reviews);
     setRecent(recentlyPosted);
 
@@ -78,9 +77,9 @@ var App = function(props) {
   };
 
   useEffect(() => {
-    var id = window.location.search.slice(4);
-
-    axios.get(`/moist-air/reviews?gameID=${id}`)
+    var search = window.location.search;
+    var query = search.replace(/id/gi, 'gameID');
+    axios.get(`/moist-air/reviews${query}`)
       .then(function (response) {
         reviewProccesor(response.data);
       })

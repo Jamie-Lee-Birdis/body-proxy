@@ -9,6 +9,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx']
   },
+  devtool: 'cheap-module-source-map',
   mode: 'development',
   module: {
     rules: [
@@ -35,6 +36,5 @@ module.exports = {
         }
       }
     ]
-  },
-  watch: true
+  }
 };
